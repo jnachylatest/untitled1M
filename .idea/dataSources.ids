@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="SQLite -" uuid="d41bdf11-3190-4928-823d-2d2dd1fd8cc0">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="AUTOR" schema="" catalog="" type="TABLE">
+      <column name="id_autor" sqlType="INTEGER(8)" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="nazwisko" sqlType="VARCHAR(25)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id_autor"/>
+      <exported-key name="#FAKE_KSIAZKA_AUTOR_1" table="KSIAZKA_AUTOR" schema="" catalog="" columns="id_autor"/>
+    </table>
+    <table name="KSIAZKA" schema="" catalog="" type="TABLE">
+      <column name="id_ksiazka" sqlType="INTEGER(8)" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="nazwa" sqlType="VARCHAR(20)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id_ksiazka"/>
+      <exported-key name="#FAKE_KSIAZKA_AUTOR_2" table="KSIAZKA_AUTOR" schema="" catalog="" columns="id_ksiazka"/>
+      <exported-key name="#FAKE_WYPOZYCZENIE_1" table="WYPOZYCZENIE" schema="" catalog="" columns="id_ksiazka"/>
+    </table>
+    <table name="KSIAZKA_AUTOR" schema="" catalog="" type="TABLE">
+      <column name="id_ksiazka_autor" sqlType="INTEGER(8)" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="id_ksiazka" sqlType="INTEGER(8)" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="id_autor" sqlType="INTEGER(8)" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id_ksiazka_autor"/>
+      <foreign-key name="#FAKE_KSIAZKA_AUTOR_1" columns="id_autor" ref-table="AUTOR" ref-schema="" ref-catalog="" ref-columns="id_autor" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_KSIAZKA_AUTOR_2" columns="id_ksiazka" ref-table="KSIAZKA" ref-schema="" ref-catalog="" ref-columns="id_ksiazka" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="WYPOZYCZENIE" schema="" catalog="" type="TABLE">
+      <column name="id_wypozyczenie" sqlType="INTEGER(8)" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="nazwa" sqlType="VARCHAR(20)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="id_ksiazka" sqlType="INTEGER(8)" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id_wypozyczenie"/>
+      <foreign-key name="#FAKE_WYPOZYCZENIE_1" columns="id_ksiazka" ref-table="KSIAZKA" ref-schema="" ref-catalog="" ref-columns="id_ksiazka" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+  </data-source>
+</component>

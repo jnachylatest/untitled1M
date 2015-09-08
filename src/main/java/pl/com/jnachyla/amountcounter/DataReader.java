@@ -1,4 +1,4 @@
-package pl.com.jnachyla.sallarycounter;
+package pl.com.jnachyla.amountcounter;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;

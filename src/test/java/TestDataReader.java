@@ -1,8 +1,5 @@
 import org.junit.Test;
-import pl.com.jnachyla.sallarycounter.DataReader;
-
-import java.util.ArrayList;
-import java.util.List;
+import pl.com.jnachyla.amountcounter.DataReader;
 
 /**
  * Created by Jarek on 2015-08-18.

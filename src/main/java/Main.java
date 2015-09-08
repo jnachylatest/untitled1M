@@ -1,7 +1,6 @@
 
-import org.junit.Test;
-import pl.com.jnachyla.sallarycounter.AmountCounter;
-import pl.com.jnachyla.sallarycounter.DataReader;
+import pl.com.jnachyla.amountcounter.AmountCounter;
+import pl.com.jnachyla.amountcounter.DataReader;
 
 public class Main {
 

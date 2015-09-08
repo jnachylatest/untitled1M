@@ -1,6 +1,5 @@
-package pl.com.jnachyla.sallarycounter;
+package pl.com.jnachyla.amountcounter;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
